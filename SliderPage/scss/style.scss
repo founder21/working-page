@@ -26,9 +26,9 @@
    max-width: 80%;
    left: 50%;
    transform: translateX(-50%);
-   padding-right: 30%;
+   padding-right: 20%;
    box-sizing: border-box;
-   color: #eeea;
+   color: #fafafa;
    text-shadow: 0 5px 10px #0004;
 }
 .carousel .list .item .autor {
@@ -45,6 +45,10 @@
 .carousel .list .item .topic {
    color: #f1683a;
 }
+.carousel .list .item .content .des {
+   line-height: 110%;
+   padding-right: 10%;
+}
 .carousel .list .item .buttons {
    display: grid;
    grid-template-columns: repeat(2, 130px);
@@ -56,13 +60,21 @@
    border: none;
    background-color: #eee;
    letter-spacing: 3px;
+   color: #2b2b2b;
    font-family: Poppins;
    font-weight: 500;
+   transition: all 0.3s;
+   &:hover {
+      color: #f1683a;
+   }
 }
 .carousel .list .item .buttons button:nth-child(2) {
-   background-color: transparent;
+   background-color: rgb(202, 202, 202, 0.2);
    border: 1px solid #fff;
    color: #eee;
+   &:hover {
+      color: #f1683a;
+   }
 }
 //====================================================================================================
 .thumbnail {
@@ -79,6 +91,10 @@
    height: 220px;
    flex-shrink: 0;
    position: relative;
+   transition: all 0.3s;
+   &:hover {
+      transform: scale(1.1);
+   }
 }
 .thumbnail .item img {
    width: 100%;
@@ -120,10 +136,12 @@
    font-family: monospace;
    font-weight: bold;
    transition: 0.5s;
+   &:nth-child(1) {
+      transform: rotate(180deg);
+   }
 }
 .arrows button:hover {
    background-color: #fff;
-   color: #000;
 }
 //====================================================================================================
 .carousel .list .item:nth-child(1) {
@@ -241,11 +259,15 @@
       opacity: 0;
    }
 }
-@media screen and (max-width: 678px) {
+@media screen and (max-width: 768px) {
    .carousel .list .item .content {
       padding-right: 0;
+      top: 10%;
    }
    .carousel .list .item .content .title {
       font-size: 30px;
+   }
+   .carousel .list .item .content .topic {
+      font-size: 3em;
    }
 }

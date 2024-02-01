@@ -82,10 +82,10 @@ button {
   -webkit-transform: translateX(-50%);
       -ms-transform: translateX(-50%);
           transform: translateX(-50%);
-  padding-right: 30%;
+  padding-right: 20%;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
-  color: rgba(238, 238, 238, 0.6666666667);
+  color: #fafafa;
   text-shadow: 0 5px 10px rgba(0, 0, 0, 0.2666666667);
 }
 
@@ -106,6 +106,11 @@ button {
   color: #f1683a;
 }
 
+.carousel .list .item .content .des {
+  line-height: 110%;
+  padding-right: 10%;
+}
+
 .carousel .list .item .buttons {
   display: grid;
   grid-template-columns: repeat(2, 130px);
@@ -118,14 +123,23 @@ button {
   border: none;
   background-color: #eee;
   letter-spacing: 3px;
+  color: #2b2b2b;
   font-family: Poppins;
   font-weight: 500;
+  -webkit-transition: all 0.3s;
+  transition: all 0.3s;
+}
+.carousel .list .item .buttons button:hover {
+  color: #f1683a;
 }
 
 .carousel .list .item .buttons button:nth-child(2) {
-  background-color: transparent;
+  background-color: rgba(202, 202, 202, 0.2);
   border: 1px solid #fff;
   color: #eee;
+}
+.carousel .list .item .buttons button:nth-child(2):hover {
+  color: #f1683a;
 }
 
 .thumbnail {
@@ -148,6 +162,13 @@ button {
   -ms-flex-negative: 0;
       flex-shrink: 0;
   position: relative;
+  -webkit-transition: all 0.3s;
+  transition: all 0.3s;
+}
+.thumbnail .item:hover {
+  -webkit-transform: scale(1.1);
+      -ms-transform: scale(1.1);
+          transform: scale(1.1);
 }
 
 .thumbnail .item img {
@@ -202,10 +223,14 @@ button {
   -webkit-transition: 0.5s;
   transition: 0.5s;
 }
+.arrows button:nth-child(1) {
+  -webkit-transform: rotate(180deg);
+      -ms-transform: rotate(180deg);
+          transform: rotate(180deg);
+}
 
 .arrows button:hover {
   background-color: #fff;
-  color: #000;
 }
 
 .carousel .list .item:nth-child(1) {
@@ -408,11 +433,15 @@ button {
     opacity: 0;
   }
 }
-@media screen and (max-width: 678px) {
+@media screen and (max-width: 768px) {
   .carousel .list .item .content {
     padding-right: 0;
+    top: 10%;
   }
   .carousel .list .item .content .title {
     font-size: 30px;
+  }
+  .carousel .list .item .content .topic {
+    font-size: 3em;
   }
 }

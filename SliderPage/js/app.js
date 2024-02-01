@@ -15,10 +15,10 @@ let timeAutoNext = 7000;
 let runTimeOut;
 
 //autoRUN
-// let runAutoRun = setTimeout(() => {
-//    nextDom.click();
-// }, timeAutoNext);
-//
+let runAutoRun = setTimeout(() => {
+   nextDom.click();
+}, timeAutoNext);
+
 
 function showSlider(type) {
    let itemSlider = document.querySelectorAll('.carousel .list .item');
